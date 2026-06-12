@@ -105,10 +105,11 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow-md); padding: 34px 30px; text-align: center; width: 100%; max-width: 340px;
 }
 .partner-label { font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-.cobrand { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 20px auto 16px; }
-.cobrand-torii { height: 56px; width: auto; }
-.cobrand-x { font-family: 'Poppins',sans-serif; font-weight: 600; font-size: 1.3rem; color: var(--muted); }
-.cobrand-th { height: 34px; width: auto; }
+.cobrand { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 20px auto 18px; }
+.cobrand-stack { flex-direction: column; gap: 14px; }
+.cobrand-torii-full { width: 215px; max-width: 82%; height: auto; }
+.cobrand-x { font-family: 'Poppins',sans-serif; font-weight: 600; font-size: 1.2rem; color: var(--muted); }
+.cobrand-th { height: 32px; width: auto; }
 .partner-line { height: 3px; width: 60px; margin: 0 auto 16px; border-radius: 3px;
   background: linear-gradient(90deg, var(--green), var(--green-dark)); }
 .partner-tag { font-weight: 600; color: var(--slate); }
