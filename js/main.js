@@ -7,6 +7,19 @@
   /* ---- Mobile nav toggle ---- */
   var toggle = document.getElementById("navToggle");
   var nav = document.getElementById("mainNav");
+
+  function closeNav() {
+    if (!nav || !toggle) return;
+    nav.classList.remove("open");
+    toggle.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+    nav.querySelectorAll(".nav-item.open").forEach(function (it) {
+      it.classList.remove("open");
+      var t = it.querySelector(".nav-sub-toggle");
+      if (t) t.setAttribute("aria-expanded", "false");
+    });
+  }
+
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
       var open = nav.classList.toggle("open");
@@ -14,13 +27,39 @@
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
     nav.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        nav.classList.remove("open");
-        toggle.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
+      a.addEventListener("click", closeNav);
     });
   }
+
+  /* ---- Dropdown sub-menus (click toggles; hover handled by CSS) ---- */
+  document.querySelectorAll(".nav-sub-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var item = btn.closest(".nav-item");
+      var willOpen = !item.classList.contains("open");
+      // close sibling dropdowns
+      document.querySelectorAll(".nav-item.open").forEach(function (other) {
+        if (other !== item) {
+          other.classList.remove("open");
+          var ot = other.querySelector(".nav-sub-toggle");
+          if (ot) ot.setAttribute("aria-expanded", "false");
+        }
+      });
+      item.classList.toggle("open", willOpen);
+      btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    });
+  });
+
+  /* close any open dropdown when clicking outside the nav */
+  document.addEventListener("click", function (e) {
+    if (nav && !nav.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
+      document.querySelectorAll(".nav-item.open").forEach(function (it) {
+        it.classList.remove("open");
+        var t = it.querySelector(".nav-sub-toggle");
+        if (t) t.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
 
   /* ---- Current year in footer ---- */
   var yearEl = document.getElementById("year");
@@ -28,7 +67,8 @@
 
   /* ---- Scroll-reveal: tag sections, then observe ---- */
   var revealEls = document.querySelectorAll(
-    ".section, .stats-grid, .feature-card, .impact-item, .timeline li, .cta-inner, .partner-card"
+    ".section, .stats-grid, .feature-card, .impact-item, .timeline li, .cta-inner, .partner-card, " +
+    ".curric-card, .point-item, .testi-card, .principle-item, .roadmap-card, .ba-col"
   );
   revealEls.forEach(function (el) { el.classList.add("reveal"); });
 
