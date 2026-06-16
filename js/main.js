@@ -61,9 +61,8 @@
     }
   });
 
-  /* ---- Image carousel ---- */
-  (function () {
-    var root = document.getElementById("ncetCarousel");
+  /* ---- Image carousel (supports multiple instances) ---- */
+  function initCarousel(root) {
     if (!root) return;
     var track = root.querySelector(".carousel-track");
     var slides = root.querySelectorAll(".carousel-slide");
@@ -115,7 +114,9 @@
     });
 
     go(0); play();
-  })();
+  }
+
+  document.querySelectorAll(".carousel").forEach(initCarousel);
 
   /* ---- Current year in footer ---- */
   var yearEl = document.getElementById("year");
@@ -124,7 +125,8 @@
   /* ---- Scroll-reveal: tag sections, then observe ---- */
   var revealEls = document.querySelectorAll(
     ".section, .stats-grid, .feature-card, .impact-item, .timeline li, .cta-inner, .partner-card, " +
-    ".curric-card, .point-item, .testi-card, .principle-item, .roadmap-card, .ba-col"
+    ".curric-card, .point-item, .testi-card, .principle-item, .roadmap-card, .ba-col, " +
+    ".myna-table, .metric, .myna-callout"
   );
   revealEls.forEach(function (el) { el.classList.add("reveal"); });
 

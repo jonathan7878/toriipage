@@ -388,6 +388,48 @@ img { max-width: 100%; display: block; }
   .carousel-btn { width: 40px; height: 40px; font-size: 1.4rem; }
 }
 
+/* ---------- Myna platform section ---------- */
+.myna-eyebrow { background: #eaf5e6; color: var(--green-dark); }
+.myna-subhead { margin-top: 64px; }
+.myna-h3 { font-size: clamp(1.35rem, 2.4vw, 1.8rem); color: var(--navy); margin-bottom: 14px; }
+
+/* Capabilities table */
+.myna-table { width: 100%; border-collapse: collapse; margin-top: 40px; background: #fff;
+  border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+.myna-table th, .myna-table td { text-align: left; padding: 20px 24px; vertical-align: top;
+  border-bottom: 1px solid var(--line); }
+.myna-table thead th { background: var(--bg-alt); color: var(--navy); font-family: 'Poppins', sans-serif;
+  font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; }
+.myna-table tbody tr:last-child td { border-bottom: 0; }
+.myna-table td:first-child { width: 230px; }
+.myna-table td { color: var(--slate); }
+.pillar-tag { display: inline-block; font-weight: 600; font-size: .92rem; color: var(--navy);
+  background: #fff0e8; border: 1px solid #ffd9c4; border-radius: 999px; padding: 6px 14px; }
+
+/* Impact metrics */
+.metric-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 44px; }
+.metric { flex: 1 1 280px; max-width: 380px; background: var(--navy); color: #fff; border-radius: var(--radius);
+  padding: 36px 28px; text-align: center; box-shadow: var(--shadow-md); }
+.metric-num { display: block; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 3rem;
+  line-height: 1; color: #fff; }
+.metric-num .u { color: var(--orange); }
+.metric-label { display: block; margin-top: 12px; font-size: .82rem; letter-spacing: .08em;
+  text-transform: uppercase; color: #c4cbd8; }
+
+/* Future-proof callout */
+.myna-callout { margin-top: 56px; background: #fff; border: 1px solid var(--line);
+  border-left: 4px solid var(--green); border-radius: var(--radius); padding: 26px 30px;
+  color: var(--slate); box-shadow: var(--shadow-sm); }
+.myna-callout strong { color: var(--navy); }
+
+/* Platform screenshot carousel — show full UI, never crop */
+.carousel.myna-shots .carousel-slide img { aspect-ratio: 16 / 9; object-fit: contain; background: var(--bg-alt); }
+
+@media (max-width: 620px) {
+  .myna-table td:first-child { width: auto; }
+  .myna-table th, .myna-table td { padding: 16px 18px; }
+}
+
 /* ---------- Reveal animation ---------- */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }
