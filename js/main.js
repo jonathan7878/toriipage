@@ -126,7 +126,7 @@
   var revealEls = document.querySelectorAll(
     ".section, .stats-grid, .feature-card, .impact-item, .timeline li, .cta-inner, .partner-card, " +
     ".curric-card, .point-item, .testi-card, .principle-item, .roadmap-card, .ba-col, " +
-    ".myna-table, .metric, .myna-callout"
+    ".myna-table, .metric, .myna-callout, .myna-skill"
   );
   revealEls.forEach(function (el) { el.classList.add("reveal"); });
 

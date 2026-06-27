@@ -25,7 +25,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
   color: var(--ink);
   background: var(--bg);
   line-height: 1.65;
@@ -139,9 +139,9 @@ img { max-width: 100%; display: block; }
 .partner-label { font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .cobrand { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 20px auto 18px; }
 .cobrand-stack { flex-direction: column; gap: 14px; }
-.cobrand-torii-full { width: 215px; max-width: 82%; height: auto; }
+.cobrand-torii-full { width: 200px; max-width: 78%; height: auto; }
 .cobrand-x { font-family: 'Poppins',sans-serif; font-weight: 600; font-size: 1.2rem; color: var(--muted); }
-.cobrand-th { height: 32px; width: auto; }
+.cobrand-th { width: 200px; max-width: 78%; height: auto; }
 .partner-line { height: 3px; width: 60px; margin: 0 auto 16px; border-radius: 3px;
   background: linear-gradient(90deg, var(--green), var(--green-dark)); }
 .partner-tag { font-weight: 600; color: var(--slate); }
@@ -429,6 +429,23 @@ img { max-width: 100%; display: block; }
   border-left: 4px solid var(--green); border-radius: var(--radius); padding: 26px 30px;
   color: var(--slate); box-shadow: var(--shadow-sm); }
 .myna-callout strong { color: var(--navy); }
+
+/* Four core LSRW skills */
+.myna-skills { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; margin-top: 44px; }
+.myna-skill { background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 30px 22px; text-align: center; box-shadow: var(--shadow-sm);
+  transition: transform .2s ease, box-shadow .2s ease; }
+.myna-skill:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.skill-ico { width: 62px; height: 62px; margin: 0 auto 18px; border-radius: 50%; display: grid;
+  place-items: center; color: #fff; background: linear-gradient(135deg, var(--orange), var(--orange-dark)); }
+.skill-ico svg { width: 30px; height: 30px; }
+.myna-skill:nth-child(2) .skill-ico { background: linear-gradient(135deg, var(--green), var(--green-dark)); }
+.myna-skill:nth-child(3) .skill-ico { background: linear-gradient(135deg, var(--navy), #2c4f8f); }
+.myna-skill:nth-child(4) .skill-ico { background: linear-gradient(135deg, #e0a015, #c2410c); }
+.myna-skill h4 { color: var(--navy); margin-bottom: 6px; font-size: 1.12rem; }
+.myna-skill p { color: var(--muted); font-size: .9rem; margin: 0; }
+@media (max-width: 720px) { .myna-skills { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .myna-skills { grid-template-columns: 1fr; } }
 
 /* Platform screenshot carousel — show full UI, never crop */
 .carousel.myna-shots .carousel-slide img { aspect-ratio: 16 / 9; object-fit: contain; background: var(--bg-alt); }
