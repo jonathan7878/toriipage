@@ -59,7 +59,11 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid var(--line);
 }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; }
 .brand-logo { height: 42px; }
+.brand-x { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--muted); font-size: 1.05rem; }
+.brand-logo-th { height: 30px; }
+@media (max-width: 420px) { .brand-x, .brand-logo-th { display: none; } }
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav > a { font-weight: 500; color: var(--slate); font-size: .96rem; position: relative; }
 .main-nav > a:not(.nav-cta)::after {
@@ -113,6 +117,9 @@ img { max-width: 100%; display: block; }
 .hl-orange { color: var(--orange); }
 .hl-blue   { color: var(--navy); }
 .hl-green  { color: var(--green-dark); }
+/* Claude AI highlight — marker-style emphasis in the hero */
+.hl-claude { color: #c2410c; font-weight: 800; padding: 0 .12em; border-radius: 6px;
+  background: linear-gradient(180deg, transparent 58%, #ffd9b8 58%); }
 /* keyword highlight inside section headings */
 .section-title .hl-orange { color: var(--orange); }
 .section-title .hl-green  { color: var(--green-dark); }
@@ -424,6 +431,18 @@ img { max-width: 100%; display: block; }
 
 /* Platform screenshot carousel — show full UI, never crop */
 .carousel.myna-shots .carousel-slide img { aspect-ratio: 16 / 9; object-fit: contain; background: var(--bg-alt); }
+
+/* Get Myna — store & website badges */
+.store-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 36px; }
+.store-badge { display: inline-flex; align-items: center; gap: 12px; min-width: 200px;
+  background: var(--ink); color: #fff; border-radius: 14px; padding: 12px 22px;
+  border: 1px solid var(--ink); transition: transform .15s ease, box-shadow .2s ease; }
+.store-badge:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.store-badge .store-ico { font-size: 1.6rem; line-height: 1; }
+.store-badge .store-text { display: flex; flex-direction: column; line-height: 1.2; }
+.store-badge .store-text small { font-size: .72rem; letter-spacing: .04em; opacity: .8; }
+.store-badge .store-text strong { font-family: 'Poppins', sans-serif; font-size: 1.12rem; font-weight: 700; }
+.store-badge[data-store="web"] { background: var(--orange); border-color: var(--orange); }
 
 @media (max-width: 620px) {
   .myna-table td:first-child { width: auto; }
