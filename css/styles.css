@@ -60,9 +60,9 @@ img { max-width: 100%; display: block; }
 }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; }
-.brand-logo { height: 42px; }
-.brand-x { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--muted); font-size: 1.05rem; }
-.brand-logo-th { height: 24px; }
+.brand-logo { height: 30px; width: auto; }
+.brand-logo-th { height: 30px; width: auto; }
+.brand-x { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--muted); font-size: .95rem; }
 @media (max-width: 420px) { .brand-x, .brand-logo-th { display: none; } }
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav > a { font-weight: 500; color: var(--slate); font-size: .96rem; position: relative; }
@@ -430,16 +430,21 @@ img { max-width: 100%; display: block; }
 .carousel.myna-shots .carousel-slide img { aspect-ratio: 16 / 9; object-fit: contain; background: var(--bg-alt); }
 
 /* Get Myna — store & website badges */
-.store-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 36px; }
-.store-badge { display: inline-flex; align-items: center; gap: 12px; min-width: 200px;
-  background: var(--ink); color: #fff; border-radius: 14px; padding: 12px 22px;
-  border: 1px solid var(--ink); transition: transform .15s ease, box-shadow .2s ease; }
+.store-badges { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; margin-top: 36px; }
+/* Image badges (App Store / Google Play) */
+.store-badge-img { display: inline-flex; align-items: center; height: 56px; border-radius: 10px;
+  transition: transform .15s ease, box-shadow .2s ease; }
+.store-badge-img:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.store-badge-img img { height: 100%; width: auto; display: block; border-radius: 10px; }
+/* Website button — matches badge height */
+.store-badge { display: inline-flex; align-items: center; gap: 12px; height: 56px;
+  background: var(--orange); color: #fff; border-radius: 12px; padding: 0 24px;
+  border: 1px solid var(--orange); transition: transform .15s ease, box-shadow .2s ease; }
 .store-badge:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-.store-badge .store-ico { font-size: 1.6rem; line-height: 1; }
+.store-badge .store-ico { font-size: 1.5rem; line-height: 1; }
 .store-badge .store-text { display: flex; flex-direction: column; line-height: 1.2; }
-.store-badge .store-text small { font-size: .72rem; letter-spacing: .04em; opacity: .8; }
+.store-badge .store-text small { font-size: .72rem; letter-spacing: .04em; opacity: .85; }
 .store-badge .store-text strong { font-family: 'Poppins', sans-serif; font-size: 1.12rem; font-weight: 700; }
-.store-badge[data-store="web"] { background: var(--orange); border-color: var(--orange); }
 
 @media (max-width: 620px) {
   .myna-table td:first-child { width: auto; }
