@@ -139,9 +139,9 @@ img { max-width: 100%; display: block; }
 .partner-label { font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .cobrand { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 20px auto 18px; }
 .cobrand-stack { flex-direction: column; gap: 14px; }
-.cobrand-torii-full { width: 200px; max-width: 78%; height: auto; }
+.cobrand-torii-full { height: 44px; width: auto; max-width: 80%; }
 .cobrand-x { font-family: 'Poppins',sans-serif; font-weight: 600; font-size: 1.2rem; color: var(--muted); }
-.cobrand-th { width: 200px; max-width: 78%; height: auto; }
+.cobrand-th { height: 44px; width: auto; max-width: 80%; }
 .partner-line { height: 3px; width: 60px; margin: 0 auto 16px; border-radius: 3px;
   background: linear-gradient(90deg, var(--green), var(--green-dark)); }
 .partner-tag { font-weight: 600; color: var(--slate); }
