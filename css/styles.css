@@ -62,7 +62,7 @@ img { max-width: 100%; display: block; }
 .brand { display: inline-flex; align-items: center; gap: 12px; }
 .brand-logo { height: 42px; }
 .brand-x { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--muted); font-size: 1.05rem; }
-.brand-logo-th { height: 30px; }
+.brand-logo-th { height: 24px; }
 @media (max-width: 420px) { .brand-x, .brand-logo-th { display: none; } }
 .main-nav { display: flex; align-items: center; gap: 28px; }
 .main-nav > a { font-weight: 500; color: var(--slate); font-size: .96rem; position: relative; }
@@ -117,9 +117,6 @@ img { max-width: 100%; display: block; }
 .hl-orange { color: var(--orange); }
 .hl-blue   { color: var(--navy); }
 .hl-green  { color: var(--green-dark); }
-/* Claude AI highlight — marker-style emphasis in the hero */
-.hl-claude { color: #c2410c; font-weight: 800; padding: 0 .12em; border-radius: 6px;
-  background: linear-gradient(180deg, transparent 58%, #ffd9b8 58%); }
 /* keyword highlight inside section headings */
 .section-title .hl-orange { color: var(--orange); }
 .section-title .hl-green  { color: var(--green-dark); }
