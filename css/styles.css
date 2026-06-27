@@ -60,12 +60,13 @@ img { max-width: 100%; display: block; }
 }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; }
-.brand-logo { height: 30px; width: auto; }
+.brand-logo { height: 23px; width: auto; }       /* Torii — reduced to visually match TH */
 .brand-logo-th { height: 30px; width: auto; }
 .brand-x { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--muted); font-size: .95rem; }
 @media (max-width: 420px) {
   .brand { gap: 8px; }
-  .brand-logo, .brand-logo-th { height: 24px; }
+  .brand-logo { height: 19px; }
+  .brand-logo-th { height: 25px; }
   .nav-wrap { padding: 0 16px; }
 }
 .main-nav { display: flex; align-items: center; gap: 28px; }
@@ -139,7 +140,7 @@ img { max-width: 100%; display: block; }
 .partner-label { font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .cobrand { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 20px auto 18px; }
 .cobrand-stack { flex-direction: column; gap: 14px; }
-.cobrand-torii-full { height: 44px; width: auto; max-width: 80%; }
+.cobrand-torii-full { height: 34px; width: auto; max-width: 80%; }
 .cobrand-x { font-family: 'Poppins',sans-serif; font-weight: 600; font-size: 1.2rem; color: var(--muted); }
 .cobrand-th { height: 44px; width: auto; max-width: 80%; }
 .partner-line { height: 3px; width: 60px; margin: 0 auto 16px; border-radius: 3px;
@@ -246,7 +247,7 @@ img { max-width: 100%; display: block; }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 44px; }
 .about-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
   padding: 34px 32px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
-.about-logo { height: 42px; width: auto; object-fit: contain; object-position: left center; margin-bottom: 20px; }
+.about-logo { height: 28px; width: auto; object-fit: contain; object-position: left center; margin-bottom: 20px; }
 .about-logo.th { height: 34px; }
 .about-card p { margin: 0 0 18px; }
 .about-link { margin-top: auto; font-weight: 600; color: var(--orange); }
@@ -281,7 +282,7 @@ img { max-width: 100%; display: block; }
 /* ---------- Footer ---------- */
 .site-footer { background: #0c0f14; color: #aeb6c2; padding: 60px 0 28px; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 32px; }
-.footer-logo { height: 40px; filter: brightness(0) invert(1); margin-bottom: 14px; }
+.footer-logo { height: 28px; filter: brightness(0) invert(1); margin-bottom: 14px; }
 .footer-brand p { max-width: 28em; font-size: .94rem; }
 .footer-col h5 { color: #fff; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 14px; }
 .footer-col a { display: block; color: #aeb6c2; padding: 5px 0; font-size: .95rem; }
@@ -411,8 +412,10 @@ img { max-width: 100%; display: block; }
 .myna-table tbody tr:last-child td { border-bottom: 0; }
 .myna-table td:first-child { width: 230px; }
 .myna-table td { color: var(--slate); }
-.pillar-tag { display: inline-block; font-weight: 600; font-size: .92rem; color: var(--navy);
-  background: #fff0e8; border: 1px solid #ffd9c4; border-radius: 999px; padding: 6px 14px; }
+.pillar-tag { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: .95rem;
+  color: var(--navy); background: #fff0e8; border: 1px solid #ffd9c4; border-radius: 999px; padding: 6px 14px; }
+.pillar-ico { display: inline-flex; align-items: center; gap: 5px; color: var(--orange); }
+.pillar-ico svg { width: 17px; height: 17px; }
 
 /* Impact metrics */
 .metric-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 44px; }
@@ -471,6 +474,13 @@ img { max-width: 100%; display: block; }
   .myna-table td:first-child { width: auto; }
   .myna-table th, .myna-table td { padding: 16px 18px; }
 }
+
+/* ---------- Consistent body type scale (same size throughout) ---------- */
+.section p, .narrow p, .split-copy p, .about-card p, .overview p,
+.feature-card p, .impact-item p, .problem-item p, .curric-card p,
+.point-item p, .myna-skill p, .footer-brand p, .roadmap-card .txt,
+.check-list li, .ba-col li, .testi-card blockquote { font-size: 1rem; line-height: 1.6; }
+.lead, .hero-lede, .cta-band p { font-size: 1.12rem; line-height: 1.6; }
 
 /* ---------- Reveal animation ---------- */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
